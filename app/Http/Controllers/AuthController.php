@@ -90,7 +90,7 @@ class AuthController extends Controller
         ]);
 
         // Redirigir al login con un mensaje de éxito
-        return redirect()->route('login')->with('success', ErrorCodes::S2001 . ' User registered successfully!');
+        return redirect()->signedRoute('login')->with('success', ErrorCodes::S2001 . ' Inicia Sesión.');
     }
 
     /**

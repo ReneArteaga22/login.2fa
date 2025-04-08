@@ -45,7 +45,7 @@ Route::group(['web', 'detect-malicious-scripts', 'xss'], function() {
 
     Route::get('/login', function () {
         return view('login');
-    })->name('login')->middleware('notAuthenticate','signed');  // Si no está autenticado
+    })->name('login')->middleware('notAuthenticate');  
 
     Route::get('/verifyCode', function () {
         return view('verifyCode');
